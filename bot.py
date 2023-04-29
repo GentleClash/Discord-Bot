@@ -13,18 +13,6 @@ sp_oauth=SpotifyOAuth(scope = SCOPE, client_id=SPOTIPY_CLIENT_ID, client_secret=
 openai.api_key = OPENAI_API_KEY
 spotify = spotipy.Spotify(auth_manager=sp_oauth)
 
-commands_list={"!hello" : "Random greeting",
-               "!set ": "Set reminder using format \'[MINUTES] [MESSAGE]\', eg: \"!set 2 maggie time\" ",
-               "!show" : "Shows the reminders",
-               "!join" : "Joins the voice channel. Note: User must have joined a voice channel.",
-               "!leave" : "Leaves the voice channel",
-               "!pause/!resume" : "Pause and Resume current audio respectively.",
-               "!play" : "Play the song by spotify. Use format !play [SONG_NAME]",
-               "!ask" : "ChatGPT. Use format !ask [PROMPT]"
-
-}
-
-
 
 @bot.event
 async def on_ready():
